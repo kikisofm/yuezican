@@ -187,8 +187,7 @@ body::after {
 }
 
 .search-box input:focus {
-  border-color: var(--color-primary-light);
-  box-shadow: 0 0 0 3px rgba(201,122,107,0.1);
+  outline: none;
 }
 
 .search-box input::placeholder { color: var(--color-text-light); }
@@ -522,7 +521,7 @@ body {
 }
 .search-box input {
   padding: 9px 14px 9px 38px;
-  font-size: 14px;
+  font-size: 16px;
 }
 .search-box .search-icon {
   left: 14px;
@@ -531,15 +530,15 @@ body {
 .tab-bar {
   gap: 4px;
   padding: 3px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  flex-wrap: wrap;
 }
 .tab-bar::-webkit-scrollbar { display: none; }
 .tab-btn {
   padding: 7px 14px;
   font-size: 13px;
   min-height: 36px;
+  flex: 1 1 calc(33.3% - 4px);
+  text-align: center;
 }
 
 /* ===== 菜谱列表 - 移动端紧凑双列 ===== */
