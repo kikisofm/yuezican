@@ -1,0 +1,25 @@
+{
+  "name": "月子餐餐谱",
+  "short_name": "月子餐",
+  "description": "723道科学月子餐谱，温补调养，助力产后恢复",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FBF7F4",
+  "theme_color": "#C97B6B",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
