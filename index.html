@@ -615,46 +615,6 @@ body {
 .empty-icon { font-size: 40px; }
 .empty-state h3 { font-size: 16px; }
 
-/* ===== 大屏适配 ===== */
-@media (min-width: 768px) {
-  .app-header { padding: 32px 0 28px; }
-  .header-inner { padding: 0 32px; }
-  .header-left { gap: 16px; }
-  .header-icon { width: 52px; height: 52px; border-radius: 16px; font-size: 26px; }
-  .header-text h1 { font-size: 24px; }
-  .header-text p { font-size: 13px; }
-  .app-main { padding: 28px 32px 60px; }
-  .stats-bar { gap: 16px; margin-bottom: 24px; flex-wrap: wrap; overflow: visible; }
-  .stat-card { padding: 16px 20px; gap: 12px; }
-  .stat-card:last-child { display: flex; }
-  .stat-icon { width: 40px; height: 40px; font-size: 18px; }
-  .stat-info .stat-num { font-size: 22px; }
-  .stat-info .stat-label { font-size: 12px; }
-  .toolbar { gap: 12px; margin-bottom: 24px; flex-direction: row; }  .search-box { max-width: 360px; }
-  .tab-btn { padding: 8px 18px; font-size: 13px; min-height: auto; }
-  .meal-grid { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
-  .meal-card { padding: 20px; border-radius: var(--radius-lg); }
-  .meal-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--color-primary-light); }
-  .meal-card:hover::before { opacity: 1; }
-  .card-name { font-size: 17px; -webkit-line-clamp: unset; }
-  .card-category { padding: 2px 10px; font-size: 11px; }
-  .card-desc { font-size: 13px; -webkit-line-clamp: 3; }
-  .meta-tag { font-size: 12px; padding: 3px 8px; }
-  .detail-overlay { padding: 20px; align-items: center; }
-  .detail-panel { max-width: 640px; max-height: 85vh; border-radius: var(--radius-lg); transform: translateY(20px) scale(0.97); }
-  .detail-overlay.show .detail-panel { transform: translateY(0) scale(1); }
-  .detail-header { padding: 28px 28px 0; }
-  .detail-header h2 { font-size: 22px; }
-  .detail-close { width: 36px; height: 36px; border-radius: 10px; font-size: 18px; }
-  .detail-tags { padding: 12px 28px 0; gap: 8px; }
-  .detail-tag { font-size: 12px; padding: 4px 10px; }
-  .detail-body { padding: 20px 28px 28px; }
-  .detail-section { margin-bottom: 20px; }
-  .detail-section-title { font-size: 15px; margin-bottom: 10px; }
-  .detail-section-content { font-size: 14px; line-height: 1.8; }
-  .detail-desc { font-size: 14px; padding: 12px 16px; margin-bottom: 16px; }
-}
-
 /* 安全区域适配（iPhone X+ 底部） */
 @supports (padding-bottom: env(safe-area-inset-bottom)) {
   .app-main { padding-bottom: calc(80px + env(safe-area-inset-bottom)); }
@@ -815,6 +775,46 @@ body {
 
 .meal-card {
   cursor: pointer;
+}
+
+/* ===== 大屏适配 ===== */
+@media (min-width: 768px) {
+  .app-header { padding: 32px 0 28px; }
+  .header-inner { padding: 0 32px; }
+  .header-left { gap: 16px; }
+  .header-icon { width: 52px; height: 52px; border-radius: 16px; font-size: 26px; }
+  .header-text h1 { font-size: 24px; }
+  .header-text p { font-size: 13px; }
+  .app-main { padding: 28px 32px 60px; }
+  .stats-bar { gap: 16px; margin-bottom: 24px; flex-wrap: wrap; overflow: visible; }
+  .stat-card { padding: 16px 20px; gap: 12px; }
+  .stat-card:last-child { display: flex; }
+  .stat-icon { width: 40px; height: 40px; font-size: 18px; }
+  .stat-info .stat-num { font-size: 22px; }
+  .stat-info .stat-label { font-size: 12px; }
+  .toolbar { gap: 12px; margin-bottom: 24px; flex-direction: row; }  .search-box { max-width: 360px; }
+  .tab-btn { padding: 8px 18px; font-size: 13px; min-height: auto; }
+  .meal-grid { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .meal-card { padding: 20px; border-radius: var(--radius-lg); }
+  .meal-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--color-primary-light); }
+  .meal-card:hover::before { opacity: 1; }
+  .card-name { font-size: 17px; -webkit-line-clamp: unset; }
+  .card-category { padding: 2px 10px; font-size: 11px; }
+  .card-desc { font-size: 13px; -webkit-line-clamp: 3; }
+  .meta-tag { font-size: 12px; padding: 3px 8px; }
+  .detail-overlay { padding: 20px; align-items: center; }
+  .detail-panel { max-width: 640px; max-height: 85vh; border-radius: var(--radius-lg); transform: translateY(20px) scale(0.97); }
+  .detail-overlay.show .detail-panel { transform: translateY(0) scale(1); }
+  .detail-header { padding: 28px 28px 0; }
+  .detail-header h2 { font-size: 22px; }
+  .detail-close { width: 36px; height: 36px; border-radius: 10px; font-size: 18px; }
+  .detail-tags { padding: 12px 28px 0; gap: 8px; }
+  .detail-tag { font-size: 12px; padding: 4px 10px; }
+  .detail-body { padding: 20px 28px 28px; }
+  .detail-section { margin-bottom: 20px; }
+  .detail-section-title { font-size: 15px; margin-bottom: 10px; }
+  .detail-section-content { font-size: 14px; line-height: 1.8; }
+  .detail-desc { font-size: 14px; padding: 12px 16px; margin-bottom: 16px; }
 }
 
 </style>
