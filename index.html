@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>月子餐餐谱</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍲</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -1567,7 +1568,7 @@ function openDetail(id) {
   if (meal.nature) tagsHtml.push(`<span class="detail-tag ${meal.nature}">${natureMap[meal.nature] || meal.nature}</span>`);
   if (meal.stage) tagsHtml.push(`<span class="detail-tag stage">${meal.stage}</span>`);
   // 检查是否为我喜欢
-  if (favoriteNames.some(fn => meal.name.includes(fn) || fn.includes(meal.name))) {
+  if (meal.favorite) {
     tagsHtml.push('<span class="detail-tag warm">我喜欢</span>');
   }
   document.getElementById('detailTags').innerHTML = tagsHtml.join('');
