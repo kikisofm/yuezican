@@ -478,19 +478,15 @@ body {
 .stats-bar {
   gap: 8px;
   margin-bottom: 12px;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 .stats-bar::-webkit-scrollbar { display: none; }
 .stat-card {
   padding: 10px 12px;
   gap: 8px;
   border-radius: 10px;
-  min-width: auto;
-  flex: 1;
-  flex-shrink: 0;
+  flex: 1 1 calc(50% - 4px);
+  min-width: 0;
 }
 /* 移动端隐藏"全部菜谱"卡片（与标题重复） */
 .stat-card:last-child {
@@ -530,15 +526,12 @@ body {
 .tab-bar {
   gap: 4px;
   padding: 3px;
-  flex-wrap: wrap;
 }
 .tab-bar::-webkit-scrollbar { display: none; }
 .tab-btn {
   padding: 7px 14px;
   font-size: 13px;
   min-height: 36px;
-  flex: 1 1 calc(33.3% - 4px);
-  text-align: center;
 }
 
 /* ===== 菜谱列表 - 移动端紧凑双列 ===== */
@@ -785,7 +778,8 @@ body {
   .header-text h1 { font-size: 24px; }
   .header-text p { font-size: 13px; }
   .app-main { padding: 28px 32px 60px; }
-  .stats-bar { gap: 16px; margin-bottom: 24px; flex-wrap: wrap; overflow: visible; }
+  .stats-bar { gap: 16px; margin-bottom: 24px; flex-wrap: nowrap; overflow: visible; }
+  .stat-card { flex: 1; }
   .stat-card { padding: 16px 20px; gap: 12px; }
   .stat-card:last-child { display: flex; }
   .stat-icon { width: 40px; height: 40px; font-size: 18px; }
